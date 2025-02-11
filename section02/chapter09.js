@@ -18,7 +18,7 @@ const tennisP = arr1.filter(
 // 2. map
 // 배열의 모든 요소를 순회하면서, 각각 콜백함수를 실행하고 그 결과값을 모아서 새로운 배열로 반환
 let arr2 = [1,2,3];
-const mapResult1 = arr2.map((item,idx, arr)=>{
+const mapResult1 = arr2.map((item, idx, arr)=>{
     return item *2;
 });
 
