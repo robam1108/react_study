@@ -1,27 +1,23 @@
 import './App.css'
-import Header from './components/Header'
-import Main from './components/Main'
-import Footer from './components/footer'
-import Button from "./components/Button"
+import { useState } from 'react'
 
 function App() {
-
-  const buttonProps = {
-    text: "메일",
-    color: "red",
-    a: 1,
-    b: 2,
-    c: 3,
-  }
-
+  const [conut, setCount] = useState(0);
+  const [light, setLight] = useState("OFF");
   return (
     <>
-        <Button {...buttonProps}/>
-        <Button text={"카페"}/>
-        <Button text={"블로그"}>
-          <div>자식요소</div>
-          <Header/>
-        </Button>
+    <div>
+      <h1>{light}</h1>
+      <button onClick={()=>{
+        setLight(light === "ON" ? "OFF" : "ON")
+      }}>{light ==="ON"? "끄기":"켜기"}</button>
+    </div>
+    <div>
+      <h1>{conut}</h1>
+      <button onClick={()=>{
+        setCount(conut+1)
+      }}>+</button>
+    </div>
     </>
   )
 }
