@@ -1,11 +1,12 @@
 import './App.css'
-import Welcome from './assets/components/Welcome'
+import OrderEditor from './assets/components/OrderEditor'
+
 
 function App() {
 
   return (
     <>
-      <Welcome name={"김보람"} isMember={false}/>
+      <OrderEditor/>
     </>
   )
 }
